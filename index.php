@@ -162,8 +162,8 @@ if (!empty($_POST['data'])) // Create new paste/comment
 
     // Make sure content is not too big.
     $data = $_POST['data'];
-    if (strlen($data)>200000000)
-        { echo json_encode(array('status'=>1,'message'=>'Paste is limited to 200 Mb of encrypted data.')); exit; }
+    if (strlen($data)>5000000)
+        { echo json_encode(array('status'=>1,'message'=>'Paste is limited to 5 Mb of encrypted data.')); exit; }
 
     // Make sure format is correct.
     if (!validSJCL($data))
